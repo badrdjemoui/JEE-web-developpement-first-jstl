@@ -47,9 +47,16 @@ Une boucle qui s'exécute un certain nombre de fois en JSTL :
 
 Une boucle sur un array (tableau) :
 
-<c:forEach items="${ titres }" var="titre" varStatus="status">
-    <p>N°<c:out value="${ status.count }" /> : <c:out value="${ titre }" /> !</p>
-</c:forEach>
+                          java doGet
+
+       String[] titres={"titre one","titre two","titre three"};
+        
+        request.setAttribute("titres", titres);
+
+                          jstl
+               <c:forEach items="${ titres }" var="titre" varStatus="status">
+               <p>N°<c:out value="${ status.count }" /> : <c:out value="${ titre }" /> !</p>
+               </c:forEach>
 
 Une boucle qui travaille sur une chaîne de caractères découpée :
 
